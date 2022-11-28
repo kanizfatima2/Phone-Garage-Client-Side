@@ -1,0 +1,67 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Navbar = () => {
+
+
+    const menuItems = <>
+        <li className='font-bold'><Link to="/home">Home</Link></li>
+        <li className='font-bold'><Link to="/appointment">Appointment</Link></li>
+        <li className='font-bold'><Link to="/blogs">Blogs</Link></li>
+    </>
+
+    return (
+        <div>
+            <div className="navbar bg-base-100 shadow-xl">
+                <div className="navbar-start">
+                    <div className="dropdown">
+                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        </label>
+                        <ul tabIndex={1} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-400 rounded-box w-52">
+                            {menuItems}
+                        </ul>
+
+                    </div>
+                    <img className='w-12' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfrXNbQ9k1MyH5em-MyIrQQvAaEcmh2_qW3A&usqp=CAU" alt="" />
+                    <Link to='/' className="btn btn-ghost normal-case text-xl lg:mx-1 pl-1">Phone Garage</Link>
+
+
+
+                </div>
+                <div className="navbar-end hidden lg:flex">
+                    <ul className="menu menu-horizontal p-0">
+                        {menuItems}
+                        {/* {
+                            user ?
+                                <><div className="w-10 rounded-full">
+                                    <img src={user.photoURL} alt="" />
+                                </div></>
+                                : <><small>No image</small></>
+                        } */}
+                    </ul>
+                </div>
+
+                {/* Dashboard SideBar Button  */}
+
+                <div className='mx-auto mr-0'>
+                    <label htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost lg:hidden ">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                </div>
+
+                {/* User Profile pic  */}
+                {/* {
+                    user ?
+                        <><div className="w-10 rounded-full lg:hidden  mx-auto mr-0 ml-4">
+                            <img src={user?.photoURL} alt="" />
+                        </div></>
+                        : <><small>No image</small></>
+                } */}
+
+            </div>
+        </div>
+    );
+};
+
+export default Navbar;

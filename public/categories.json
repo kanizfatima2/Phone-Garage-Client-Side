@@ -1,0 +1,17 @@
+[
+    {
+        "phone_id": 1,
+        "name": "OppO",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2022/04/Oppo-A16e.jpg"
+    },
+    {
+        "phone_id": 2,
+        "name": "iPhone",
+        "img": "https://www.apple.com/v/iphone-14/c/images/overview/selfies/selfie_startframe__ex2suisayck2_large.jpg"
+    },
+    {
+        "phone_id": 3,
+        "name": "Samsung",
+        "img": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-s10-cardinal-red.jpg"
+    }
+]

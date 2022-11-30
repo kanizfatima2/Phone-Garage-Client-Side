@@ -6,6 +6,7 @@ import ErrorPage from "../Shared/ErrorPage";
 import AllPhones from "../AllPhones/AllPhones";
 import Login from '../Authentication/Login';
 import Signup from '../Authentication/Signup';
+import PrivateRoute from './PrivateRoute';
 
 export const router = createBrowserRouter([
     {

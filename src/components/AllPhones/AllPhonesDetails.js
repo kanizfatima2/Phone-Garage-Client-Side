@@ -1,8 +1,9 @@
 import React from 'react';
+import BookingModal from './BookingModal';
 
 
-const AllPhonesDetails = ({ phone, setAllPhonesData }) => {
-    console.log(phone)
+const AllPhonesDetails = ({ phone }) => {
+    // console.log(phone)
     const { img, model, location, resalePrice, orginalPrice, yearsOfUse, condition, sellerName, sellerNumber, postingDate } = phone;
 
     return (
@@ -29,9 +30,10 @@ const AllPhonesDetails = ({ phone, setAllPhonesData }) => {
 
                     <div className="card-actions justify-end">
 
-                        <label onClick={() => setAllPhonesData(phone)} htmlFor="booking-modal" className="btn btn-info bg-gradient-to-r from-cyan-600 to-info">Book Now</label>
-                    </div>
+                        <label htmlFor={phone._id} className="btn btn-info bg-gradient-to-r from-cyan-600 to-info">Book Now</label>
 
+                    </div>
+                    <BookingModal phone={phone}></BookingModal>
                 </div>
             </div>
 

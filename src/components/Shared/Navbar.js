@@ -56,13 +56,13 @@ const Navbar = () => {
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal p-0">
                         {menuItems}
-                        {/* {
+                        {
                             user ?
                                 <><div className="w-10 rounded-full">
                                     <img src={user.photoURL} alt="" />
                                 </div></>
-                                : 
-                        } */}
+                                : <></>
+                        }
                     </ul>
                 </div>
 
@@ -75,13 +75,13 @@ const Navbar = () => {
                 </div>
 
                 {/* User Profile pic */}
-                {/* {
+                {
                     user ?
                         <><div className="w-10 rounded-full lg:hidden  mx-auto mr-0 ml-4">
                             <img src={user?.photoURL} alt="" />
                         </div></>
-                        : 
-                } */}
+                        : <></>
+                }
 
             </div>
         </div>

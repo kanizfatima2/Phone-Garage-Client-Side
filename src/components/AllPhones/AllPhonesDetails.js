@@ -1,8 +1,10 @@
 import React from 'react';
 
-const AllPhonesDetails = ({ phone }) => {
+
+const AllPhonesDetails = ({ phone, setAllPhonesData }) => {
     console.log(phone)
     const { img, model, location, resalePrice, orginalPrice, yearsOfUse, condition, sellerName, sellerNumber, postingDate } = phone;
+
     return (
         <div>
             <div className="card lg:card-side bg-base-100 shadow-xl h-full">
@@ -26,11 +28,14 @@ const AllPhonesDetails = ({ phone }) => {
 
 
                     <div className="card-actions justify-end">
-                        <button className=" btn btn-info bg-gradient-to-r from-cyan-600 to-info">Book Now</button>
+
+                        <label onClick={() => setAllPhonesData(phone)} htmlFor="booking-modal" className="btn btn-info bg-gradient-to-r from-cyan-600 to-info">Book Now</label>
                     </div>
 
                 </div>
             </div>
+
+
         </div>
     );
 };

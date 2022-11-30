@@ -23,4 +23,4 @@ const CategoriesDetails = ({ categories }) => {
     );
 };
 
-export default CategoriesDetails;
+export default CategoriesDetails

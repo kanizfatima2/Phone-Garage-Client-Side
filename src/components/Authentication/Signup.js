@@ -55,7 +55,7 @@ const Signup = () => {
         const user = {
             name, email, specialty
         }
-        fetch('http://localhost:5000/users', {
+        fetch('https://mobile-resale-server-side.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

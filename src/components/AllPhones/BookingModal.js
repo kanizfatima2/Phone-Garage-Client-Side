@@ -30,7 +30,7 @@ const BookingModal = ({ phone }) => {
         }
         console.log(booking)
 
-        fetch(`http://localhost:5000/phonebookings`, {
+        fetch(`https://mobile-resale-server-side.vercel.app/phonebookings`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

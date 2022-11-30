@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
             {
                 path: '/allPhones/:id',
                 element: <AllPhones></AllPhones>,
-                loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.id}`)
+                loader: ({ params }) => fetch(`https://mobile-resale-server-side.vercel.app/categories/${params.id}`)
             }
         ]
     }

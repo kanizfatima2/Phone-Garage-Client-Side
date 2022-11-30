@@ -3,6 +3,9 @@ import Roots from "./Roots";
 import Home from '../Home Page/Home';
 import Blogs from '../Blogs/Blogs';
 import ErrorPage from "../Shared/ErrorPage";
+import AllPhones from "../AllPhones/AllPhones";
+import Login from '../Authentication/Login';
+import Signup from '../Authentication/Signup';
 
 export const router = createBrowserRouter([
     {
@@ -17,6 +20,19 @@ export const router = createBrowserRouter([
                 path: '/blogs',
                 element: <Blogs></Blogs>
             },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <Signup></Signup>
+            },
+            {
+                path: '/allPhones/:id',
+                element: <AllPhones></AllPhones>,
+                loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.id}`)
+            }
         ]
     }
 ])

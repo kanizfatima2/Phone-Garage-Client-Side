@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     return (
 
-        <div className="hero my-12">
+        <div className="hero my-16">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src="https://smartphonebio.com/wp-content/uploads/2021/06/Samsung-Galaxy-S40-Pro.jpg" className="lg:w-1/2 rounded-lg shadow-2xl" alt="" />
                 <div>

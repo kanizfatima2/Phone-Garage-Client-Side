@@ -1,13 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../Authentication/Context/AuthProvider';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+
+    const handlelogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.error(err))
+
+    }
 
 
     const menuItems = <>
         <li className='font-bold'><Link to="/home">Home</Link></li>
-        <li className='font-bold'><Link to="/appointment">Appointment</Link></li>
+
         <li className='font-bold'><Link to="/blogs">Blogs</Link></li>
+
+        {
+            user?.uid ?
+                <>
+                    <li className='font-bold'><Link to="/dashboard">Dashboard</Link></li>
+                    <li className='font-bold'><Link onClick={handlelogOut}>Logout</Link></li>
+                </>
+                :
+                <>
+                    <li className='font-bold'><Link to="/login">Login</Link></li>
+                    <li className='font-bold'><Link to="/signup">SignUp</Link></li></>
+        }
+
     </>
 
     return (
@@ -37,7 +61,7 @@ const Navbar = () => {
                                 <><div className="w-10 rounded-full">
                                     <img src={user.photoURL} alt="" />
                                 </div></>
-                                : <><small>No image</small></>
+                                : 
                         } */}
                     </ul>
                 </div>
@@ -50,13 +74,13 @@ const Navbar = () => {
                     </label>
                 </div>
 
-                {/* User Profile pic  */}
+                {/* User Profile pic */}
                 {/* {
                     user ?
                         <><div className="w-10 rounded-full lg:hidden  mx-auto mr-0 ml-4">
                             <img src={user?.photoURL} alt="" />
                         </div></>
-                        : <><small>No image</small></>
+                        : 
                 } */}
 
             </div>
